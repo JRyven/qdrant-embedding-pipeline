@@ -1,0 +1,13 @@
+# Development overrides for unit tests and local smoke runs.
+paths:
+  data_dir: mock-data
+  ingest_ndjson: mock-data/ingest.ndjson
+  embeddings_npz: mock-data/embeddings.npz
+  qdrant_collection: sample-tagging-dev
+  metadata_db: mock-data/metadata.sqlite
+
+logging:
+  level: DEBUG
+
+runtime:
+  use_gpu: false

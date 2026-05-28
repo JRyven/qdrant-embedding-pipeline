@@ -1,0 +1,28 @@
+{
+  "extends": "markdownlint/style/default",
+  "no-hard-tabs": false,
+  "line-length": false,
+  "MD025": false,
+  "MD032": {
+    "list_items": false
+  },
+  "MD036": false,
+  "no-emphasis-as-heading": false,
+  "comments": {
+    "glitch": [
+      "md",
+      "cleardocs",
+      "frontmatter",
+      "Linting",
+      "Liskov",
+      "Allman",
+      "Stroustrup",
+      "Docstrings",
+      "Javadoc",
+      "Pylint",
+      "RuboCop",
+      "gofmt",
+      "linting"
+    ]
+  }
+}

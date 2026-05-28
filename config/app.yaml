@@ -1,0 +1,22 @@
+# Common configuration for the Qdrant tagging pipeline.
+# Set `environment` to either `develop` or `production` to select env-specific overrides.
+environment: develop
+
+app:
+  name: Qdrant Tagging Pipeline
+  version: 0.0.0
+  default_chunk_words: 200
+  embedding_model: all-MiniLM-L6-v2
+
+paths:
+  data_dir: data
+  ingest_ndjson: data/ingest.ndjson
+  embeddings_npz: data/embeddings.npz
+  qdrant_collection: sample-tagging
+  metadata_db: data/metadata.sqlite
+
+logging:
+  level: INFO
+
+runtime:
+  use_gpu: false

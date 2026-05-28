@@ -1,0 +1,36 @@
+# API Configuration - Production Environment
+# Customize placeholders to match your API services
+
+api:
+  # Server configuration
+  server:
+    host: "[API_HOST]"
+    port: "[API_PORT]"
+    protocol: "https"
+    timeout_seconds: 60
+  
+  # Rate limiting (stricter in production)
+  rate_limit:
+    enabled: true
+    requests_per_minute: 60
+    burst_size: 10
+  
+  # Authentication
+  authentication:
+    type: "jwt"  # Options: jwt, oauth2, apikey
+    secret_key: "[API_SECRET_KEY]"  # Use environment variable: $API_SECRET_KEY
+    token_expiry_hours: 1
+  
+  # Logging (production-grade)
+  logging:
+    enabled: true
+    level: "INFO"
+    format: "json"
+  
+  # External services
+  external_services:
+    - name: "[SERVICE_NAME]"
+      url: "[SERVICE_URL]"
+      timeout_seconds: 30
+      retry_attempts: 5
+      retry_backoff_ms: 2000

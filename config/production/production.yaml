@@ -1,0 +1,25 @@
+# Production-style overrides. Copy and adapt outside version control for real deployments.
+paths:
+  data_dir: /var/lib/qdrant-tagging-pipeline/data
+  ingest_ndjson: /var/lib/qdrant-tagging-pipeline/data/ingest.ndjson
+  embeddings_npz: /var/lib/qdrant-tagging-pipeline/data/embeddings.npz
+  qdrant_collection: sample-tagging-prod
+  metadata_db: /var/lib/qdrant-tagging-pipeline/data/metadata.sqlite
+
+logging:
+  level: WARNING
+  handlers:
+    - type: file
+      filename: /var/log/qdrant-tagging-pipeline/app.log
+      max_bytes: 10485760
+      backup_count: 5
+    - type: console
+      level: INFO
+
+runtime:
+  use_gpu: true
+
+secrets:
+  embedding_api_key: ${EMBEDDING_API_KEY:}
+  db_user: ${DB_USER:}
+  db_password: ${DB_PASSWORD:}

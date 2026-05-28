@@ -1,0 +1,30 @@
+# Database Configuration - Production Environment
+# Customize placeholders to match your database setup
+
+database:
+  # Connection settings
+  host: "[DATABASE_HOST]"
+  port: "[DATABASE_PORT]"
+  name: "[DATABASE_NAME]"
+  
+  # Authentication
+  username: "[DATABASE_USER]"
+  password: "[DATABASE_PASSWORD]"  # Use environment variables: $DATABASE_PASSWORD
+  
+  # Connection pool
+  pool:
+    min_connections: 20
+    max_connections: 100
+    idle_timeout: 600
+  
+  # Logging and debugging (minimal in production)
+  logging:
+    enabled: false
+    level: "ERROR"
+    slow_query_threshold_ms: 5000
+  
+  # SSL/TLS configuration (required in production)
+  ssl:
+    enabled: true
+    ca_cert: "[CA_CERT_PATH]"
+    verify: true

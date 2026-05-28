@@ -1,0 +1,12 @@
+# Example Setting 1 Configuration
+# This is a template for environment-specific configuration files
+
+setting1:
+  # Basic settings
+  option_a: "value_a"
+  option_b: "value_b"
+  
+  # Nested settings
+  subsetting:
+    enabled: true
+    value: 100

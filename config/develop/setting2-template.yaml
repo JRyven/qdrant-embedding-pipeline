@@ -1,0 +1,18 @@
+# Example Setting 2 Configuration
+# This is a template for environment-specific configuration files
+
+setting2:
+  # Configuration items
+  items:
+    - name: "item1"
+      enabled: true
+      value: "config1"
+    
+    - name: "item2"
+      enabled: false
+      value: "config2"
+  
+  # Default settings
+  defaults:
+    timeout: 30
+    retry_count: 3

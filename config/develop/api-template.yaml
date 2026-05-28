@@ -1,0 +1,36 @@
+# API Configuration - Development Environment
+# Customize placeholders to match your API services
+
+api:
+  # Server configuration
+  server:
+    host: "localhost"
+    port: "[API_PORT]"
+    protocol: "http"
+    timeout_seconds: 30
+  
+  # Rate limiting
+  rate_limit:
+    enabled: true
+    requests_per_minute: 100
+    burst_size: 20
+  
+  # Authentication
+  authentication:
+    type: "jwt"  # Options: jwt, oauth2, apikey
+    secret_key: "[API_SECRET_KEY]"
+    token_expiry_hours: 24
+  
+  # Logging
+  logging:
+    enabled: true
+    level: "DEBUG"
+    format: "json"
+  
+  # External services
+  external_services:
+    - name: "[SERVICE_NAME]"
+      url: "[SERVICE_URL]"
+      timeout_seconds: 10
+      retry_attempts: 3
+      retry_backoff_ms: 1000
