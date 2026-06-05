@@ -24,3 +24,4 @@ redaction_check.sh
 scripts/redaction_check.sh
 config/**/*.local.yaml
 config/**/secrets*.yaml
+.vscode/
